@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+      .container {
+        @apply w-full mx-auto px-2 sm:px-1 md:px-20 lg:px-40;
+      }
+    }
+  </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-white w-full overflow-x-hidden ">
+    <header>
+        <div class="bg-[#05422C] text-[10px] text-white flex flex-row gap-2 md:gap-4  justify-center items-center py-1">
+            <p> LIMITED OFFER: 30% OFF . Use RABBIT30 at Checkout.</p>
+            <p> <b>23:15:00</b></p>
+        </div>
+
+        <div class="flex flex-row justify-between items-center flex-wrap py-4 gap-2 container">
+            <div class="flex flex-row items-center gap-2">
+                <img src="../accets/menu.png" alt="logo" class="w-5 md:hidden">
+                <img src="../accets/logo.png" alt="logo" class="w-30 ">
+            </div>
+            <div class="flex flex-row items-center order-last md:order-none gap-2 md:gap-4 w-full md:w-[400px]">
+                <div class="flex items-center border border-[#F4F4F4] rounded-full w-full px-3 py-2 gap-2">
+                    <input type="text" placeholder="Search "
+                        class="outline-none text-[12px] md:text-[14px] w-[80%] block">
+                </div>
+                <div class="bg-[#17AF26] text-white p-2 rounded-full">
+                    <img src="../accets/search-normal.png" alt="search" class="w-4 md:w-5">
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-2 ">
+                <p class="border-r md:pr-4 pr-2 text-[12px] md:text-[14px]">Your Account</p>
+                <div class="relative">
+                    <img src="../accets/bag.png" alt="bag" class="w-5 md:w-8">
+                    <img src="../accets/zero.png" alt="zero"
+                        class="absolute bottom-0 md:bottom-0.5 right-0 md:w-4 md:h-4 w-3 h-3 ">
+                </div>
+            </div>
+        </div>
+        <div class="container hidden md:block">
+            <nav
+                class="max-w-7xl mx-auto mt-6 flex items-center justify-center gap-5 text-base font-medium text-[#203239]/80 ">
+
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Shop All
+                </a>
+
+                <button id="flowerBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Flower
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="flowerArrow" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Edibles
+                </a>
+
+                <button id="concentratesBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Concentrates
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="concentratesArrow"
+                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Mushrooms
+                </a>
+
+                <button id="promotionsBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Promotions/Bundles
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="promotionsArrow" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <button id="supportBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Support
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="supportArrow" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Rewards
+                </a><a href="#" class="hover:text-[#0B493D] transition">
+                    Blog
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class=" bg-[#F2F6F4] ">
+        <div class="container flex flex-row  pt-6 pb-6 justify-between">
+            <div class="md:flex flex-cols items-start gap-4">
+                <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white rounded-full shadow-md">
+                    <img src="../accets/truck-fast.png" alt="Shipping" class="w-6 h-6 object-contain">
+                </div>
+                <h2 class="text-[#1A1E26] font-semibold text-[14px] md:text-[18px]">Reliable Shipping</h2>
+
+            </div>
+            <vr class="border border-[#C3D2CC] h-10 mt-1 mr-4"></vr>
+            <div class="md:flex  items-start gap-4">
+
+                <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white rounded-full shadow-md">
+                    <img src="../accets/safe-home.png" alt="Shipping" class="w-6 h-6 object-contain">
+                </div>
+
+                <h2 class="text-[#1A1E26] font-semibold text-[14px] md:text-[18px]">You're Safe With Us</h2>
+
+            </div>
+             <vr class="border border-[#C3D2CC] h-10 mt-1 mr-4"></vr>
+            <div class="md:flex flex-cols items-start gap-4">
+                <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white rounded-full shadow-md">
+                    <img src="../accets/coin.png" alt="Shipping" class="w-6 h-6 object-contain">
+                </div>
+
+                <h2 class="text-[#1A1E26]  font-semibold text-[14px] md:text-[18px]">Best Quality & pricing</h2>
+
+            </div>
+
+        </div>
+    </section>
+<section class="grid gap-6 pb-28 sm:gap-8 sm:pb-10 md:grid-cols-2 md:gap-10">
+    <aside class="container hidden md:block justify-between self-start">
+<h1>
+    Filters
+</h1>
+ <hr class="border w-55 border-[#C3D2CC] mt-1 mr-4"></hr>
+ <p class="uppercase mt-4">
+    product cartegory
+ </p>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Sales" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="sale" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Sales <span>12</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Cannabis" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="Cannabis" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Cannabis <span>430</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Pre-Rolls" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="Pre-Rolls" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Pre-Rolls<span>40</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="CBD Oil" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="CBD Oil" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   CBD Oil <span>20</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id=" Magi Mushrooms " 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for=" Magi Mushrooms " class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+  Magi Mushrooms <span>34</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Extracts" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="Extracts" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Extracts <span>26</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Edible" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="edible" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Edibles <span>32</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Vape Pens" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="Vape Pens" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Vape Pens <span>12</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Accessories" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="Accessories" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Accessories<span>10</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Bath & Body" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for=" Bath & Body" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+  Bath & Body <span>8</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Bundles" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for="Bundles" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+   Bundles <span>24</span>
+  </label>
+</div>
+ <div>
+   <div class="flex items-center mb-4">
+  <input 
+    id="Wholesales" 
+    type="radio" 
+    name="choice" 
+    value="yes" 
+    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+  >
+  <label for=" Wholesales" class="ms-2 text-sm font-medium text-gray-900 cursor-pointer">
+    Wholesales <span>28</span>
+  </label>
+</div>
+
+</aside>
+    <article class="container">   
+<div>
+    <p>
+        Shop
+    </p>
+    <div>
+         <button class="">Filter </button>
+    </div>
+</div>
+    </article>
+</section>
+</body>
+
+</html>

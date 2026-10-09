@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+      .container {
+        @apply w-full mx-auto px-2 sm:px-1 md:px-20 lg:px-40;
+      }
+    }
+  </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-white w-full overflow-x-hidden ">
+    <header>
+        <div class="bg-[#05422C] text-[10px] text-white flex flex-row gap-2 md:gap-4  justify-center items-center py-1">
+            <p> LIMITED OFFER: 30% OFF . Use RABBIT30 at Checkout.</p>
+            <p> <b>23:15:00</b></p>
+        </div>
+
+        <div class="flex flex-row justify-between items-center flex-wrap py-4 gap-2 container">
+            <div class="flex flex-row items-center gap-2">
+                <img src="../accets/menu.png" alt="logo" class="w-5 md:hidden">
+                <img src="../accets/logo.png" alt="logo" class="w-30 ">
+            </div>
+            <div class="flex flex-row items-center order-last md:order-none gap-2 md:gap-4 w-full md:w-[400px]">
+                <div class="flex items-center border border-[#F4F4F4] rounded-full w-full px-3 py-2 gap-2">
+                    <input type="text" placeholder="Search "
+                        class="outline-none text-[12px] md:text-[14px] w-[80%] block">
+                </div>
+                <div class="bg-[#17AF26] text-white p-2 rounded-full">
+                    <img src="../accets/search-normal.png" alt="search" class="w-4 md:w-5">
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-2 ">
+                <p class="border-r md:pr-4 pr-2 text-[12px] md:text-[14px]">Your Account</p>
+                <div class="relative">
+                    <img src="../accets/bag.png" alt="bag" class="w-5 md:w-8">
+                    <img src="../accets/zero.png" alt="zero" class="absolute -bottom-1 right-0 w-3 h-3">
+                </div>
+            </div>
+        </div>
+        <div class="container hidden md:block">
+            <nav
+                class="max-w-7xl mx-auto mt-6 flex items-center justify-center gap-5 text-base font-medium text-[#203239]/80 ">
+
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Shop All
+                </a>
+
+                <button id="flowerBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Flower
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="flowerArrow" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Edibles
+                </a>
+
+                <button id="concentratesBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Concentrates
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="concentratesArrow"
+                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Mushrooms
+                </a>
+
+                <button id="promotionsBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Promotions/Bundles
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="promotionsArrow" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <button id="supportBtn"
+                    class="flex items-center gap-2 text-base  transition hover:text-[#203239] focus:outline-none">
+                    Support
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" id="supportArrow" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <a href="#" class="hover:text-[#0B493D] transition">
+                    Rewards
+                </a><a href="#" class="hover:text-[#0B493D] transition">
+                    Blog
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class=" mt-6 p-20  bg-[url(../accets/Mask.png)] bg-cover bg-right w-full ">
+        <div class="container">
+            <div class="flex items-center ">
+
+                <div class="flex flex-col gap-2 ">
+                    <p class=" text-[#F2BC1B] text-[12px] leading-3 md:text-[14px] ">
+                        BEST SELLER 
+                    </p>
+
+                    <h1 class=" font-semibold text-white text-[25px] md:text-[45px] leading-7 md:leading-15 w-130 ">
+                        BEST DISPENSARY TO BUY FLOWER ONLINE
+                    </h1>
+                    <p class="text-gray-300 text-[12px] md:text-[14px] font-bold ">
+                        Vitamins & Supplements
+                    </p>
+                    <div class="flex flex-row text-white gap-4 items-center mt-8 font-bold">
+                        <p class=" text-h text-[14px] border-r border-gray-300 pr-4 ">
+                            Get 25% off
+                        </p>
+                        <p class=" text- text-[14px] ">
+                            Free Shipping
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <button class=" bg-[#17AF26] text-white px-8 py-2 rounded-full text-sm font-bold">
+                            Shop All
+                        </button>
+                    </div>
+
+                </div>
+<div class="mt-65">
+    <img src="../accets/snacks1.png" alt="">
+</div>
+<div class >
+    <img src="../accets/snacks2.png" alt="">
+</div>
+<div>
+    <img src="../accets/snacks3.png" alt="">
+</div>
+            </div>
+        </div>
+    </section>
+    <section class=" bg-[#F2F6F4] ">
+        <div class="container ">
+
+        <div class="flex flex-col md:flex-row gap-4 p-2 md:gap-8 md:p-13">
+             
+                <div class="flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white rounded-full shadow-md">
+                    <img src="../accets/truck-fast.png" alt="Shipping" class="w-6 h-6 object-contain">
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-[#1A1E26] font-semibold text-[16px] md:text-[18px]">Reliable Shipping</h2>
+                    <p class="text-[#717378] text-[14px] md:text-[14px] leading-snug">
+                        Green Society provides Canada Post Xpresspost shipping right to your doorstep! You can also
+                        opt in
+                        for shipping insurance. For orders over $149, shipping is free!
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white rounded-full shadow-md">
+                    <img src="../accets/safe-home.png" alt="Shipping" class="w-6 h-6 object-contain">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h2 class="text-[#1A1E26] font-semibold text-[16px] md:text-[18px]">You're Safe With Us</h2>
+                    <p class="text-[#717378] text-[14px] md:text-[15px] leading-snug">
+                        Our secure payment system accepts the most common forms of payments making the checkout
+                        process quicker! The payments we accept are debit, all major credit cards, and
+                        cryptocurrency.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white rounded-full shadow-md">
+                    <img src="../accets/coin.png" alt="Shipping" class="w-6 h-6 object-contain">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h2 class="text-[#1A1E26] font-semibold text-[16px] md:text-[18px]">Best Quality & Pricing</h2>
+                    <p class="text-[#717378] text-[14px] md:text-[15px] leading-snug">
+                        Here at Green Society, we take pride in the quality of our products and service. Our prices
+                        are set to ensure you receive your medication at a reasonable price and safely
+                    </p>
+                </div>
+            </div>
+             </div>
+            
+        </div>
+    </section>
+
+    <style>
+        .slider {
+            scrollbar-width: thin;
+            anchor-name: --slider;
+        }
+
+        @supports selector(::scroll-button(*)) {
+            .slider {
+                scrollbar-width: none;
+            }
+
+            .slider::scroll-button(*) {
+                position: absolute;
+                position-anchor: --slider;
+                top: anchor(center);
+                translate: 0 -50%;
+                width: 28px;
+                height: 28px;
+                border-radius: 9999px;
+                border: 1px solid #d1d5db;
+                background: #fff;
+                color: #111;
+                font-size: 18px;
+                line-height: 1;
+                box-shadow: 0 1px 3px rgb(0 0 0 / .2);
+                cursor: pointer;
+            }
+
+            .slider::scroll-button(inline-start) {
+                content: "‹" / "Previous";
+                left: calc(anchor(left) + 4px);
+            }
+
+            .slider::scroll-button(inline-end) {
+                content: "›" / "Next";
+                right: calc(anchor(right) + 4px);
+            }
+
+            .slider::scroll-button(*):disabled {
+                opacity: .3;
+                cursor: default;
+            }
+        }
+    </style>
+
+    <section class=" container flex flex-col gap-4 m-12 ">
+        <h2 class="container text-center font-bold text-[26px] md:text-[40px] uppercase text-[#1A1E26]">
+            Best dispensary to buy Flowers online in Canada
+        </h2>
+        <div class="mt-4 mb-6 gap-4 flex flex-row justify-center items-center ">
+            <button
+                class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#F2F6F4] hover:border-[#05422C] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                Best Sellers
+            </button>
+            <button
+                class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#F2F6F4] text-[10px] hover:border-[#05422C] p-1 md:text-[12px] md:py-2 md:px-20">
+                Bundles & Promotions
+            </button>
+            <button
+                class="hidden md:block bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#F2F6F4] hover:border-[#05422C] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                On Sale
+            </button>
+        </div>
+        <div class="md:flex md:flex-row md:gap-8">
+            <div class="container bg-[#05422C] border border-[#05422C] rounded-lg p-6 lg:p-8
+              flex flex-col items-center justify-center text-center gap-3
+              w-full lg:w-[260px] lg:shrink-0">
+                <img src="../accets/image1.png" alt="Best sellers" class="h-32 lg:h-40 object-contain">
+                <h2 class="text-white text-[20px] lg:text-[20px] font-semibold">Shop our Best Sellers</h2>
+                <p class="text-white  text-[13px] lg:text-[13px] max-w-xs">
+                    Lorem ipsum dolor sit amet consectetur. Ullamcorper ipsum varius lorem blandit lectus magnis
+                    feugiat.
+                </p>
+
+                <a href="#" class="text-[#17AF26] underline text-[14px] font-medium">View All</a>
+            </div>
+            <div class="relative min-w-0 flex-1">
+
+                <div class="slider min-w-0 flex-1 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2">
+
+                    <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-[35%] ">
+
+                        <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                            <img src="../accets/image2.png" alt="Product" class="h-32 object-contain">
+
+                        </div>
+
+                        <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                        <h3 class="text-[14px] font-semibold text-center leading-snug">2 Oz Deal Watermelon Zkittles +
+                            <br>
+                            Purple Gushers
+                        </h3>
+                        Purple Gushers</h3>
+
+                        <div class="flex items-center justify-center gap-2 text-[11px]">
+                            <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                            <span class="text-[#717378]">| 155 Reviews</span>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Sativa 100%</span>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-2">
+                            <span class="text-[#E11D2E] font-bold text-[15px]">$80.00</span>
+                            <span class="text-[#999] line-through text-[12px]">$200.00</span>
+                        </div>
+
+                        <div class="flex justify-center gap-2 text-[11px]">
+                            <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                            <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                            <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                        </div>
+
+                        <button
+                            class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add
+                            to
+                            Cart</button>
+                    </article>
+
+                    <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                    md:w-[35%] ">
+
+                        <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                            <img src="../accets/image1.png " alt="Product" class="h-32 object-contain">
+
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="bg-[#5E7E70]/70 text-white text-[12px] px-6 py-4 rounded-full">Out Of
+                                    Stock</span>
+                            </div>
+                        </div>
+
+                        <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">concentrates</p>
+                        <h3 class="text-[14px] font-semibold text-center leading-snug">Mix And Match Shatter/Budder <br>
+                            28g (4
+                            X 7G)</h3>
+
+                        <div class="flex items-center justify-center gap-2 text-[11px]">
+                            <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                            <span class="text-[#717378]">| 155 Reviews</span>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Indica 70%</span>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-2">
+                            <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                            <span class="text-[#999] line-through text-[12px]">$102.00</span>
+                        </div>
+
+                        <div class="flex justify-center gap-2 text-[11px]">
+                            <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                            <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                            <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                        </div>
+
+                        <button
+                            class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add
+                            to
+                            Cart</button>
+                    </article>
+                    <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                    md:w-[35%] ">
+
+                        <span
+                            class="absolute top-0 left-0 bg-[#F5B400] text-white text-[11px] font-semibold px-2 py-1 rounded-tl-lg rounded-br-lg z-10">$60
+                            ounce</span>
+
+                        <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                            <img src="../accets/image2.png" alt="Product" class="h-32 object-contain">
+
+                            <div class="absolute inset-0 flex items-center justify-center">
+
+                            </div>
+                        </div>
+
+                        <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                        <h3 class="text-[13px] md:text-[14px] font-semibold text-center leading-snug">2 Oz Deal Ahi Tuna
+                            +
+                            Master <br> Tuna</h3>
+
+                        <div class="flex items-center justify-center gap-2 text-[11px]">
+                            <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                            <span class="text-[#717378]">| 135 Reviews</span>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-2">
+                            <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                            <span class="text-[#999] line-through text-[12px]">$120.00</span>
+                        </div>
+
+                        <div class="flex justify-center gap-2 text-[11px]">
+                            <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                            <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                            <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                        </div>
+
+                        <button
+                            class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add
+                            to
+                            Cart</button>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class=" mt-4 container p-3 md:p-0 flex flex-col gap-4 ">
+        <h2 class="container font-bold text-[26px] md:text-[40px] uppercase text-[#1A1E26]">
+            customer testimonials
+        </h2>
+        <div class="container md:flex md:flex-row md:gap-8">
+            <div class=" container bg-[#05422C] rounded-xl md:rounded-none p-6 lg:p-7 flex flex-col gap-4
+              w-full lg:w-[280px] lg:shrink-0">
+                <h2 class="text-white text-[22px] lg:text-[24px] font-bold uppercase leading-tight">
+                    Voted best online dispensary in Canada
+                </h2>
+                <hr class="border-white/20">
+                <p class="text-white/70 text-[24px] font-semibold tracking-tight">Google</p>
+                <p class="text-white text-[11px] font-semibold uppercase tracking-wide">Excellent</p>
+                <div class="flex items-center gap-2 text-[12px] text-white">
+                    <span class="text-[#F5B400] text-[16px] tracking-tight">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="text-white/40">|</span>
+                    <span>on <b>135</b> <span class="text-white/60">Reviews</span></span>
+                </div>
+            </div>
+
+            <div
+                class="container slider min-w-0 flex-1 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2">
+
+                <article class="snap-start border-[#F4F4F4] shrink-0 border rounded-xl p-5 bg-white flex flex-col gap-3 min-h-[200px]
+                    w-[85%]">
+                    <div class="flex items-center gap-2">
+                        <img src="../accets/person1.png" alt="" class="w-7 h-7 rounded-full object-cover bg-gray-200">
+                        <span class="text-[13px] font-medium">Vikki Starr</span>
+                    </div>
+                    <hr class="border-gray-200">
+                    <div class="text-[14px] tracking-tight">
+                        <span class="text-[#F5B400]">&#9733;&#9733;&#9733;&#9733;</span><span
+                            class="text-gray-300">&#9733;</span>
+                    </div>
+                    <p class="text-[13px] text-[#222] leading-snug">
+                        Absolutely love TopShelfBC; affordable on any budget and such fast delivery, straight to my
+                        door! I
+                        recommend them to all my friends and family for their 420 needs.
+                    </p>
+                    <p class="mt-auto text-[11px] text-[#9CA3AF]">January 15, 2025</p>
+                </article>
+                <article class="snap-start border-[#F4F4F4] shrink-0 border rounded-xl p-5 bg-white flex flex-col gap-3 min-h-[200px]
+                    w-[85%]">
+                    <div class="flex items-center gap-2">
+                        <img src="../accets/person2.png" alt="" class="w-7 h-7 rounded-full object-cover bg-gray-200">
+                        <span class="text-[13px] font-medium">Terry Baskey</span>
+                    </div>
+                    <hr class="border-gray-200">
+                    <div class="text-[14px] tracking-tight">
+                        <span class="text-[#F5B400]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <p class="text-[13px] text-[#222] leading-snug">
+                        Best damn place to buy canabis at a great price
+                    </p>
+                    <p class="mt-auto text-[11px] text-[#9CA3AF]">January 15, 2025</p>
+                </article>
+                <article class="snap-start border-[#F4F4F4] shrink-0 border rounded-xl p-5 bg-white flex flex-col gap-3 min-h-[200px]
+                    w-[85%]">
+                    <div class="flex items-center gap-2">
+                        <img src="../accets/person3.png" alt="" class="w-7 h-7 rounded-full object-cover bg-gray-200">
+                        <span class="text-[13px] font-medium">Vikki Starr</span>
+                    </div>
+                    <hr class="border-gray-200">
+                    <div class="text-[14px] tracking-tight">
+                        <span class="text-[#F5B400]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <p class="text-[13px] text-[#222] leading-snug">
+                        Best damn place to buy canabis at a great price
+                    </p>
+                    <p class="mt-auto text-[11px] text-[#9CA3AF]">January 15, 2025</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-12">
+        <h2 class="text-center font-bold text-[20px] md:text-[28px] uppercase text-[#1A1E26]">
+            CHOOSE YOUR FLOWER
+        </h2>
+        <P>
+                Filter by Interst
+            </P>
+        <div class="flex flex-row gap-6 ">
+            
+            <div class="mt-4 mb-6 gap-4 flex flex-row justify-center items-center ">
+                <button
+                    class="bg-[#F2F6F4] text-[#05422C] font-bold border border-[#05422C] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Flowers
+                </button>
+                <button
+                    class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Mushrooms
+                </button>
+                <button
+                    class="hidden md:block bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Concentrate
+                </button>
+                <button
+                    class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Edibles
+                </button>
+                <button
+                    class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Shop All Weed
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 ">
+
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                    md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image1.png " alt="Product" class="h-32 object-contain">
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="bg-[#5E7E70]/70 text-white text-[12px] px-6 py-4 rounded-full">Out Of Stock</span>
+                    </div>
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">concentrates</p>
+                <h3 class="text-[13px] font-semibold text-center leading-snug">Mix And Match Shatter/Budder 28g (4 X 7G)
+                </h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Indica 70%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                    <span class="text-[#999] line-through text-[12px]">$102.00</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                    md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image2.png" alt="Product" class="h-32 object-contain">
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+
+                    </div>
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[13px] md:text-[14px] font-semibold text-center leading-snug">2 Oz Deal Watermelon
+                    Zkittles + Purple Gyshers</h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$80.00</span>
+                    <span class="text-[#999] text-[12px]">/gram</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image2.png" alt="Product" class="h-32 object-contain">
+
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[13px] font-semibold text-center leading-snug">2 Oz Deal Watermelon Zkittles + Purple
+                    Gushers</h3>
+                Purple Gushers</h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Sativa 100%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$80.00</span>
+                    <span class="text-[#999] text-[12px]">/gram</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image2.png" alt="Product" class="h-32 object-contain">
+                    <span
+                        class="absolute top-0 left-0 bg-[#F5B400] text-white text-[11px] font-semibold px-2 py-1 rounded-tl-lg rounded-br-lg z-10">$60
+                        ounce</span>
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[14px] font-semibold text-center leading-snug">2 Oz Deal Watermelon Zkittles + Master
+                    <br>Tuna
+                </h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                    <span class="text-[#999] line-through text-[12px]">$120.00</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image3.png" alt="Product" class="h-32 object-contain">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="bg-[#5E7E70]/70 text-white text-[12px] px-6 py-4 rounded-full">Out Of Stock</span>
+                    </div>
+                </div>
+
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">concentrates</p>
+                <h3 class="text-[14px] font-semibold text-center leading-snug">Mix And Match Shatter/Budder 28g (4 X 7G)
+                </h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Sativa 100%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                    <span class="text-[#999] line-through text-[12px]">$102.00</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image2.png" alt="Product" class="h-32 object-contain">
+
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[14px] font-semibold text-center leading-snug">2 Oz Deal Watermelon Zkittles + Purple
+                    Gushers</h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 155 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Sativa 100%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$80.00</span>
+                    <span class="text-[#999] text-[12px]">/gram</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image1.png" alt="Product" class="h-32 object-contain">
+
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[14px] font-semibold text-center leading-snug">2 Oz Deal Watermelon Zkittles + Purple
+                    Gushers</h3>
+
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Sativa 100%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$80.00</span>
+                    <span class="text-[#999] text-[12px]">/gram</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image4.png" alt="Product" class="h-32 object-contain">
+                    <span
+                        class="absolute top-0 left-0 bg-[#F5B400] text-white text-[11px] font-semibold px-2 py-1 rounded-tl-lg rounded-br-lg z-10">$60
+                        ounce</span>
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[14px] font-semibold text-center leading-snug">2 Oz Deal Ahi Tuna + Master <br> Tuna
+                </h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Sativa 100%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                    <span class="text-[#999] line-through text-[12px]">$120.00</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="relative mt-25 md:mt-40">
+        <div class="container">
+            <div
+                class=" md:flex md:flex-row md:justify-start md:p-20 md:container bg-[url(../accets/Maskgroup.png)] md:bg-[url(../accets/group1.png)] h-40 md:h-65 bg-no-repeat bg-contain bg-center rounded-lg mx-8 md:pl-100 pr-10 pl-2 flex flex-col gap-2 md:gap-15 justify-center item-start absolute z-20 md:-top-35 -top-20 left-8 ">
+                <div class="md:flex md:flex-col gap-8">
+                    <h1 class=" text-2xl md:text-6xl font-bold text-white">
+                        Refer A Friend
+                    </h1>
+                    <p class="text-xl text-white">
+                        And get <span class="font-bold text-[#F2BC1B]">$30!</span>
+                    </p>
+                </div>
+                <div class="md:mt-8">
+                    <button class="mt-4 bg-[#17AF26] text-white px-2  py-1 w-30 md:py-3 md:w-35  rounded-full">
+                        Refer Here
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="z-0 bg-[#01100B] text-white pt-30 md:pt-45 flex px-2">
+            <h1c class="container text-center font-semibold text-[29px] md:text-[60px]">
+                HOW TO ORDER WEED ONLINE FROM TOP SHELF BC - MAIL ORDER MARIJUANA
+                </h1>
+                <p class="text-[12px] md:text-[20px] text-[#9D9EA2] mt-2 px-1 ">
+                    Ordering weed online from Top Shelf BC is easy. We are proud to have made the process accessible
+                    across multiple platforms and simple to understand, meaning that more people can come to us to buy
+                    their cannabis products online.
+                </p>
+
+                <div class="mx-auto max-w-4xl py-12 px-4">
+
+
+                    <div class="grid grid-cols-2 md:grid-cols-2 gap-x-10 gap-y-12">
+
+
+                        <div class="relative flex flex-col items-center text-center gap-4 px-2">
+                            <span
+                                class="absolute top-0 left-2 md:left-[12%] w-6 h-6 rounded-full bg-[#F5B400] text-[#04120D] text-[12px] font-semibold flex items-center justify-center">1</span>
+                            <img src="../accets/Register.png" alt="" class="w-40">
+                            <h3 class="text-white text-[18px] font-semibold uppercase tracking-wide">Register</h3>
+                            <p class="text-[#9D9EA2] text-[8.5px] md:text-[12px] leading-relaxed max-w-md">
+                                Sign up for an account with us. This is quick and simple. We don't require any more
+                                details from you than the bare minimum needed for you to place an order and get your
+                                product delivered.
+                            </p>
+                        </div>
+
+
+                        <div class="relative flex flex-col items-center text-center gap-4 px-2">
+                            <span
+                                class="absolute top-0 left-2 md:left-[12%] w-6 h-6 rounded-full bg-[#F5B400] text-[#04120D] text-[12px] font-semibold flex items-center justify-center">2</span>
+                            <img src="../accets/shop.png" alt="" class="w-40">
+
+                            <h3 class="text-white text-[18px] font-semibold uppercase tracking-wide">Shop</h3>
+                            <p class="text-[#9D9EA2] text-[8.5px] md:text-[12px] leading-relaxed max-w-md">
+                                Decide on what you want to purchase. We stock a wide range of edibles, flowers,
+                                concentrates and mushrooms there is bound to be something for everyone.
+                            </p>
+                        </div>
+
+
+                        <div class="relative flex flex-col items-center text-center gap-4 px-2">
+                            <span
+                                class="absolute top-0 left-2 md:left-[12%] w-6 h-6 rounded-full bg-[#F5B400] text-[#04120D] text-[12px] font-semibold flex items-center justify-center">3</span>
+                            <img src="../accets/makepayment.png" alt="" class="w-40">
+                            <h3 class="text-white text-[18px] font-semibold uppercase tracking-wide">Make Payment</h3>
+                            <p class="text-[#9D9EA2] text-[8.5px] md:text-[12px] leading-relaxed max-w-md">
+                                Pay securely. Our site boasts sturdy protection certificates to keep your card details
+                                and related data safe.
+                            </p>
+                        </div>
+
+
+                        <div class="relative flex flex-col items-center text-center gap-4 px-2">
+                            <span
+                                class="absolute top-0 left-2 md:left-[12%] w-6 h-6 rounded-full bg-[#F5B400] text-[#04120D] text-[12px] font-semibold flex items-center justify-center">4</span>
+                            <img src="../accets/relax.png" alt="" class="w-40">
+                            <h3 class="text-white text-[18px] font-semibold uppercase tracking-wide">Relax</h3>
+                            <p class="text-[#9D9EA2] text-[8.5px] md:text-[12px] leading-relaxed max-w-md">
+                                Your product will be packaged discretely and shipped by Canada Post Xpresspost. We will
+                                provide you with a tracking number so then you can follow your mail order marijuana
+                                every step of the way.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-12 flex justify-center">
+                        <a href="#"
+                            class="bg-[#17AF26] hover:opacity-90 text-white text-[14px] font-semibold rounded-full px-10 py-3">
+                            Choose your Weed
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="flex flex-col gap-4 p-4">
+            <h1 class="text-[#1A1E26] font-semibold text-[25px] md:text-[65px] text-start">
+                WHAT MAKES US THE <span class="font-bold text-[#F2BC1B]">#1</span> ONLINE MARIJUANA DISPENSARY IN
+                CANADA?
+
+            </h1>
+
+            <p class="text-[#717378] text-[13px] md:text-[21px]">
+                When it comes to what makes us the foremost online marijuana dispensary in Canada, we could wax lyrical
+                about our positive qualities. Instead, to make this information clearer, we’ve highlighted the six
+                prioritized features that we feel makes us a cut above the rest.
+            </p>
+        </div>
+
+        <div class="mx-auto max-w-4xl py-12 ">
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+
+
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-start text-start gap-6 px-2">
+
+                    <img src="../accets/customer.png" alt="" class="pt-4 md:pt-8">
+
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">customer service
+                        </h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            Whether it is answering any questions you have before making a purchase, helping out with
+                            the buying process itself or taking your feedback under consideration, we are proud to
+                            provide high quality customer service that makes you – the customer – the most important
+                            person in the transaction.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-start text-start gap-6 px-2">
+
+                    <img src="../accets/security.png" alt="" class="pt-4 md:pt-8">
+
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">security</h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            When it comes to security, we only keep what details are necessary for you to have an
+                            account with us and make an order. When it comes to shipping your mail order marijuana out,
+                            we use only tamper-proof and discrete packaging so then what you’ve purchased is your
+                            business only.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-start text-start gap-6 px-2">
+
+                    <img src="../accets/value.png" alt="" class="pt-4 md:pt-8">
+
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">best value</h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            We are continually adjusting what we supply and our prices to ensure that we maintain an
+                            optimal balance of affordable and quality for our products. We invest in the best quality
+                            strains that we can find and are always on the lookout for new, affordable and high quality
+                            weed products.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-start text-start gap-6 px-2">
+
+                    <img src="../accets/delivery.png" alt="" class="pt-4 md:pt-8">
+
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">delivery insurance
+                        </h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            If your mail order marijuana becomes lost, stolen, or damaged during transit, we will send
+                            you a replacement completely free of charge. Free Canada Post Xpress shipping on all orders
+                            over $120
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-start text-start gap-6 px-2">
+
+                    <img src="../accets/quality.png" alt="" class="pt-4 md:pt-8">
+
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">highest quality
+                        </h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            All of our cannabis products are tested to ensure that they are the highest quality
+                            possible. We work with expert suppliers and are always revising what makes a quality
+                            cannabis product to ensure that we have only the best available.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-start text-start gap-6 px-2">
+
+                    <img src="../accets/trust.png" alt="" class="pt-4 md:pt-8">
+
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">trust</h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            With over 15 years in the weed business, you can rest assured that you will be taken care
+                            of. You can guarantee that we have your best interests in mind. Feel free to check out our
+                            reviews.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-12">
+        <h2 class="text-center font-bold text-[20px] md:text-[28px] uppercase text-[#1A1E26]">
+            Recently added
+        </h2>
+        <div class="flex flex-row">
+            <P class="mt-2">
+                Filter by Interst
+            </P>
+            <div class="mt-4 mb-6 gap-4 flex flex-row justify-center items-center ">
+                <button
+                    class="bg-[#F2F6F4] text-[#05422C] font-bold border border-[#05422C] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Flowers
+                </button>
+                <button
+                    class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Mushrooms
+                </button>
+                <button
+                    class="hidden md:block bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Concentrate
+                </button>
+                <button
+                    class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Edibles
+                </button>
+                <button
+                    class="bg-white text-[#05422C] font-bold border border-[#F4F4F4] rounded-full hover:bg-[#333] text-[10px] p-1 md:text-[12px] md:py-2 md:px-20">
+                    Shop All Weed
+                </button>
+            </div>
+            <a href="#" class="text-[#17AF26] underline text-[14px] font-medium">View All</a>
+        </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 ">
+
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                    md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image1.png " alt="Product" class="h-32 object-contain">
+
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">concentrates</p>
+                <h3 class="text-[13px] font-semibold text-center leading-snug">Mix And Match Shatter/Budder 28g (4 X 7G)
+                </h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Indica 70%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                    <span class="text-[#999] line-through text-[12px]">$102.00</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                    md:w-full ">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image4.png" alt="Product" class="h-32 object-contain">
+                    <span
+                        class="absolute top-0 left-0 bg-[#17AF26] text-white text-[11px] font-semibold px-2 py-1 rounded-tl-lg rounded-br-lg z-10">$60
+                        ounce</span>
+                    <div class="absolute inset-0 flex items-center justify-center">
+
+                    </div>
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[13px] md:text-[14px] font-semibold text-center leading-snug">2 Oz Deal Watermelon
+                    Zkittles + Purple Gyshers</h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$80.00</span>
+                    <span class="text-[#999] text-[12px]">/gram</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image3.png" alt="Product" class="h-32 object-contain">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="bg-[#5E7E70]/70 text-white text-[12px] px-6 py-4 rounded-full">Out Of Stock</span>
+                    </div>
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[13px] font-semibold text-center leading-snug">2 Oz Deal Watermelon Zkittles + Purple
+                    Gushers</h3>
+                Purple Gushers</h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <span class="text-[11px] bg-[#E6F3EC] text-[#05422C] rounded px-2 py-0.5">Sativa 100%</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$80.00</span>
+                    <span class="text-[#999] text-[12px]">/gram</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+            <article class="snap-start shrink-0 relative rounded-lg p-3 flex flex-col bg-white
+                   md:w-full">
+
+                <div class="relative bg-[#F2F6F4] rounded-md h-40 flex items-center justify-center">
+                    <img src="../accets/image2.png" alt="Product" class="h-32 object-contain">
+                </div>
+
+                <p class="text-[11px] uppercase tracking-wide text-[#717378] text-center">Flower</p>
+                <h3 class="text-[14px] font-semibold text-center leading-snug">2 Oz Deal Watermelon Zkittles + Master
+                    <br>Tuna
+                </h3>
+
+                <div class="flex items-center justify-center gap-2 text-[11px]">
+                    <span class="text-yellow-500">&#9733;</span><span class="font-medium">4.6/5</span>
+                    <span class="text-[#717378]">| 135 Reviews</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-[#E11D2E] font-bold text-[15px]">$200.00</span>
+                    <span class="text-[#999] line-through text-[12px]">$120.00</span>
+                </div>
+
+                <div class="flex justify-center gap-2 text-[11px]">
+                    <button class="border border-gray-300 rounded px-2 py-0.5">28g</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/2lb</button>
+                    <button class="border border-gray-300 rounded px-2 py-0.5">1/4lb</button>
+                </div>
+
+                <button class="mt-auto bg-[#17AF26] text-white text-[12px] rounded-full py-1.5 hover:opacity-90">Add to
+                    Cart</button>
+            </article>
+
+    </section>
+    <section class="container">
+        <hr class="my-6 border-b border-gray-300" />
+        <div class="mx-auto max-w-4xl py-12 ">
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+
+
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-center text-start gap-6 px-2">
+                    <div class="flex mt-4 justify-center item-center w-full border border-[#CECFD566] bg-[#F2F6F4] ">
+                        <img src="../accets/leaf.png" alt="" class="p-6 md:pt-8">
+                        <img src="../accets/sleep.png" alt="" class="w-9 h-9 mt-23 -ml-15">
+                    </div>
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">indica
+                        </h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            This type of cannabis is commonly taken by those who want to sink into a state of total
+                            relaxation in every limb. This reduces stress overall and can take your worries and fatigue
+                            away. Because of its relaxing effects, it is suggested to use this type of cannabis at
+                            night. It is particularly recommended for people who have trouble sleeping, be it due to
+                            insomnia, pain or other associated sleep issues.
+                        </p>
+                        <button class=" text-start text-[#17AF26] underline underline-[#17AF26]">Shop Indica</button>
+                    </div>
+                </div>
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-center text-start gap-6 px-2">
+                    <div class="flex mt-4 justify-center item-center w-full border border-[#CECFD566] bg-[#F2F6F4] ">
+                        <img src="../accets/leaf.png" alt="" class="p-6 md:pt-8">
+                        <img src="../accets/sun.png" alt="" class="w-9 h-9 mt-23 -ml-15">
+                    </div>
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">Sativa
+                        </h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            Contrary to the deep all-body relaxation that comes with the use of indica strains, sativas
+                            are known for increasing the feeling of creativity, enhancing focus and lessening anxiety.
+                            This is more of a mind-centered high in terms of how and where you will feel the effects.
+                            Given its stimulating nature, it is recommended to use this during the day.
+                        </p>
+                        <button class=" text-start text-[#17AF26] underline underline-[#17AF26]">Shop Sativa</button>
+                    </div>
+                </div>
+                <div
+                    class="relative border border-[#CECFD566] rounded-lg flex flex-col items-center text-start gap-6 px-2">
+                    <div class="flex mt-4 justify-center item-center w-full border border-[#CECFD566] bg-[#F2F6F4] ">
+                        <img src="../accets/leaf2.png" alt="" class="p-6 md:pt-8">
+                    </div>
+                    <div class="flex flex-col gap-4 px-2 md:px-4">
+                        <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">Hybrids
+                        </h3>
+                        <p class="text-[#9D9EA2] text-[10px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                            Hybrid strains are just that – they combine the head-focused high effects of sativas with
+                            the bodily relaxation of indicas. This is ideal for people who really want to sooth any
+                            fatigue and worries while also clearing the mind ready to focus fresh on something new.
+                            Hybrids are expertly tailored to result in strains with specific effects. Useful strain
+                            vocabulary to familiarize yourself with when it comes to hybrids includes sativa-dominant
+                            (full, bodily relaxation), indica-dominant (boosting creativity, increasing mood and
+                            lessening anxiety) and balanced (the best of both worlds).
+                        </p>
+                        <button class=" text-start text-[#17AF26] underline underline-[#17AF26]">Shop Hybrids</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#F4F4F4]">
+        <div class="container py-4">
+            <div class="flex gap-24 md:gap-190 pt-6">
+                <h1 class="text-[18px] font-semibold">
+                    Weed Education
+                </h1>
+                <button class=" text-start text-[#17AF26] underline underline-[#17AF26]">
+                    Show All
+                </button>
+            </div>
+            <hr class="my-6 border-b border-gray-300" />
+
+            <div class="mx-auto max-w-4xl ">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+
+                    <div class="relative flex flex-col items-center text-start gap-6 ">
+                        <div class="flex justify-center item-center w-full ">
+                            <img src="../accets/image 17.png" alt="">
+                        </div>
+                        <span class="text-[#9D9EA2] text-[10px] text-start -ml-44 text-[14px] ">January 24, 2023</span>
+                        <div class="flex flex-col gap-4 px-2 md:px-4">
+                            <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">12 Mistakes To
+                                Avoid When Buying Cannabis Online
+                            </h3>
+                            <p
+                                class="text-[#9D9EA2] text-[14.5px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                                Buying cannabis online can be a great way to get your hands on the products you need
+                                without leaving the comfort of your home. But …
+                            </p>
+                            <button class=" text-start text-[#17AF26] underline underline-[#17AF26]">Read more</button>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col items-center text-start gap-6 ">
+                        <div class="flex justify-center item-center w-full ">
+                            <img src="../accets/image 18.png" alt="">
+                        </div>
+                        <span class="text-[#9D9EA2] text-[10px] text-start -ml-44 text-[14px]">January 24, 2023</span>
+                        <div class="flex flex-col gap-4 px-2 md:px-4">
+                            <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">How To Store
+                                Cannabis and Keep it Fresh and Potent?
+                            </h3>
+                            <p
+                                class="text-[#9D9EA2] text-[14.5px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                                Cannabis packaging has advanced dramatically in recent years, whether your state has a
+                                medicinal marijuana programme, legal adult-use weed, or both. Most ...
+                            </p>
+                            <button class=" text-start text-[#17AF26] underline underline-[#17AF26]">Read More</button>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col items-center text-start gap-6 ">
+                        <div class="flex justify-center item-center w-full ">
+                            <img src="../accets/image 19.png" alt="">
+                        </div>
+                        <span class="text-[#9D9EA2] -ml-44 text-[14px]">January 24, 2023</span>
+                        <div class="flex flex-col gap-4 px-2 md:px-4">
+                            <h3 class="text-[#1A1E26] text-[18px] font-semibold uppercase tracking-wide">The Ultimate
+                                Guide to Checking the Quality of Cannabis – 10 Industry Leading Tips
+                                <p
+                                    class="text-[#9D9EA2] text-[14.5px] md:text-[11px] leading-relaxed max-w-md pb-2 md:pb-4">
+                                    Quality cannabis is a term used to describe cannabis products that meet specific
+                                    standards of excellence. It is essential to understand what quality cannabis means,
+                                    …
+                                </p>
+                                <button class=" text-start text-[#17AF26] underline underline-[#17AF26]">Read
+                                    More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+
+        <div class="relative">
+
+            <div class="absolute inset-0 bg-gradient-to-b from-white  "></div>
+
+            <div class="container relative mx-auto px-4 md:max-w-[1100px]">
+                <div class="rounded-2xl bg-[#05422C] px-6 py-8 md:px-10 md:py-10">
+                    <h2 class="max-w-[520px] text-[28px] font-bold uppercase text-white md:text-[44px]">
+                        Unlock 20% off your first order
+                    </h2>
+                    <p class="mt-4 text-[10px] text-[#C3D2CC] md:text-[13px]">
+                        Reveal coupon code by entering your email
+                    </p>
+
+                    <div class="mt-3 flex items-center gap-3 border-t border-white/10 pt-4 md:mt-4">
+                        <input type="email" placeholder="Email Address"
+                            class="h-[22px] w-[20px] flex-1 rounded-full border border- md:px-5 px-2 text-[12px] text-white placeholder:text-[#9D9EA2] focus:outline-none md:h-[46px]">
+                        <button type="button"
+                            class="h-[22px] whitespace-nowrap rounded-full bg-[#14C41F] px-6 text-[12px] font-semibold text-white md:h-[46px] md:px-8">
+                            Reveal coupon
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-[#1A1E2] pb-6 pt-12 text-white md:-mt-[90px] md:pt-[150px]">
+            <div class="container mx-auto px-4 md:max-w-[1100px]">
+
+
+                <div class="md:grid md:grid-cols-2 md:gap-16">
+                    <div>
+                        <img src="../accets/logo2.png" alt="Top Shelf British Columbia" class="w-[130px]">
+                        <p class="py-4 text-[11px] leading-[1.6] text-[#9D9EA2] md:max-w-[260px] md:text-[10px]">
+                            #1 Canadian top rated online dispensary that meets the customers needs in every single
+                            medical
+                            marijuana aspect. The team here at TopShelfBC is heavily involved in the Canadian cannabis
+                            industry for over 15 years. We strive to provide the top quality products, service and care
+                            at
+                            the lowest prices you’ll ever find.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-7">
+
+
+                        <div>
+                            <h3 class="text-[12px] font-semibold uppercase">Quick link</h3>
+                            <div class="mt-4 grid grid-cols-2 gap-x-4 text-[9px] text-[#9D9EA2] md:max-w-[330px]">
+                                <ul class="grid gap-[10px]">
+                                    <li>Track Your Order</li>
+                                    <li>Shop All</li>
+                                    <li>Flower</li>
+                                    <li>Edibles</li>
+                                    <li>Concentrates</li>
+                                    <li>Refunds</li>
+                                </ul>
+                                <ul class="grid content-start gap-[10px]">
+                                    <li>Mushrooms</li>
+                                    <li>Promotions / Bundles</li>
+                                    <li>Support</li>
+                                    <li>Reward</li>
+                                    <li>Blog</li>
+                                    <li>Shipping Faq</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h3 class="text-[12px] font-semibold uppercase">Contact us</h3>
+                            <p class="mt-3 text-[9px] text-[#9D9EA2]">info@topshelfbc.cc</p>
+                        </div>
+
+
+                        <div>
+                            <h3 class="text-[12px] font-semibold uppercase">More</h3>
+                            <div class="mt-3 grid grid-cols-2 gap-x-4 text-[9px] text-[#9D9EA2] md:max-w-[330px]">
+                                <ul class="grid gap-[9px]">
+                                    <li>Buy weed online in Canada</li>
+                                    <li>Buy weed online in New Brunswick</li>
+                                    <li>Buy weed online in Prince Edward Island</li>
+                                    <li>Buy weed online in Northwest Territories</li>
+                                    <li>Buy weed online in Saskatchewan</li>
+                                </ul>
+                                <ul class="grid content-start gap-[9px]">
+                                    <li>Buy weed online in Manitoba</li>
+                                    <li>Buy weed online in Quebec</li>
+                                    <li>Buy weed online in British Columbia</li>
+                                    <li>Buy weed online in Ontario</li>
+                                    <li>Buy weed online in Alberta</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-4">
+                                <button type="button">
+                                    <img src="../accets/row.png" alt="Accepted payment methods" class="h-[12px] w-auto">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-10 border-t border-white/10 pt-5 text-[8px] text-[#9D9EA2]
+                        flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                    <p>© 2022 Top Shelf BC. All Rights Reserved.</p>
+                    <div class="flex gap-5 text-white/90">
+                        <span>Out Of Stock</span>
+                        <span>Privacy Policy</span>
+                        <span>Terms &amp; Condition</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+</body>
+
+</html>
